@@ -1,24 +1,15 @@
 /*
 Kody Mitchell
-4/7/21
+4/14/22
 Final Project
-Sudoku Master - A program dealing with all things Sudoku!                -- PROFESSOR HINTON! See below for grading help
+Sudoku Master - A program dealing with all things Sudoku!
 */
 
-/*Grading help below!
-Classes -- You can see that's pretty covered
-Inheritance: MouseListener > Button > SudokuNumberButton; sf::Transformable & sf::Drawable > Button; Exception > InvalidPuzzleException
-Abstraction: MouseListener > Button
-Encapsulation: Button class does this well
-Polymorphism: Source - Lines 65, 80, 87, 523, 529, etc.
-File I/O: SudokuMaster - methods saveProgress, createSudokuPuzzle, loadPuzzle, fileToSolve; Source - Lines 256, 337
-Multi-threading: Source - Lines 213, 228, 297, 380, etc.   Mutexes also found at Source Line 550 and SudokuMaster Line 419
-Recursion: SudokuMaster - methods searchExactCover and removeBoardValue() use direct recursion
-Exception Handling: Source - Line 348; SudokuMaster - method fileToSolve
+/*
 
-EXTRAS: Lambdas: Source - Lines 76 - 495-ish
-Templates: SudokuMaster.h (ONLY IN HEADER) - method registerContainer
-Smart Pointers: Shared pointers are littered everywhere in this program
+    The Magic of the AI is contained within the Algorithm X method of SudokuMaster 
+    as well as the files for DoubleLinkedNodeMatrix and DoubleLinkedNode
+
 */
 
 using namespace std;
@@ -29,6 +20,7 @@ using namespace std;
 #include <string>
 #include <fstream>
 #include <thread>
+#include <iostream>
 #include "Button.h"
 #include "SudokuNumberButton.h"
 #include "ColorHelper.h"
@@ -47,6 +39,7 @@ int main()
     srand(time(0));
 
     //LOADING PROGRAM
+    cout << "Loading...";
 
     sf::RenderWindow window(sf::VideoMode(1024, 760), "Sudoku Master");
 
@@ -503,6 +496,7 @@ int main()
         }
     }
 
+    cout << "\nComplete!\n";
     //END LOADING
 
     while (window.isOpen())

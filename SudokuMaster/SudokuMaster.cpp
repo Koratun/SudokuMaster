@@ -1252,7 +1252,7 @@ vector<vector<vector<int>>> SudokuMaster::algorithmX(vector<vector<int>>& puzzle
 
 
 	//This was used for debugging purposes. Also it looks cool
-	/*cout << "Printing exact cover matrix...\n\n";
+	cout << "Printing exact cover matrix...\n\n";
 
 	for (int row = 0; row < size*size*size; row++) {
 		cout << row << " ";
@@ -1271,7 +1271,7 @@ vector<vector<vector<int>>> SudokuMaster::algorithmX(vector<vector<int>>& puzzle
 			}
 		}
 		cout << endl;
-	}*/
+	}
 
 	//Created a DLX dancing link matrix from the binary matrix
 	DoubleLinkedNodeMatrix nodeMatrix(exactCoverMatrix);
